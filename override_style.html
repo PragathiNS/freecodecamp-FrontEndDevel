@@ -4,6 +4,9 @@ The second declaration will always take precedence over the first. -->
 <!-- Id attribute will always take precedence over class attribute no matter where it is places in the styling tag -->
 
 <!-- In-line styling overrides the other styling format --> 
+
+<!-- Keyword "!important" overrides every other styling -->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +20,7 @@ The second declaration will always take precedence over the first. -->
     color: orange;
   }
   .pink-text {
-    color: pink;
+    color: pink !important;
   }
   
   .blue-text {
