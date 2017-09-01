@@ -1,0 +1,41 @@
+.addClass()
+
+.prop()
+
+
+
+.html() that lets you add HTML tags and text within an element
+Any content previously within the element will be completely replaced with the content you provide using this function.
+$("h3").html("<em>jQuery Playground</em>");
+	
+.css() 
+
+.text() that only alters text without adding tags.
+this function will treat it as the text you want to replace the existing content with.
+
+.remove() that will remove an HTML element entirely
+$("#target4").remove();
+
+.appendTo() that allows you to select HTML elements and append them to another element.
+$("#target2").appendTo("#right-well");
+
+.clone() that makes a copy of an element.
+
+function chaining -  sticking two jQuery functions together
+$("#target5").clone().appendTo("#left-well");
+
+parent() that allows you to access the parent of whichever element you've selected.
+$("#target1").parent().css("background", "red");
+
+children() that allows you to access the children of whichever element you've selected.
+$("#right-well").children().css("color", "orange");
+
+jQuery uses CSS Selectors to target elements. 
+target:nth-child(n) css selector allows you to select all the nth elements with the target class or element type.
+$(".target:nth-child(2)").addClass("animated bounce");
+
+Note that jQuery is zero-indexed, meaning that, counter-intuitively, :odd selects the second element, fourth element, and so on.
+ $(".target:even").addClass("animated shake");
+ 
+To all body
+$("body").addClass("animated hinge");
