@@ -34,10 +34,35 @@ Code	Output
 .length
 var lastNameLength = 0;
 var lastName = "Lovelace";
-
-// Only change code below this line.
-
 lastNameLength = lastName.length;
 
 
 Bracket notation is a way to get a character at a specific index within a string.
+Use Bracket Notation to Find the NthtoLast Character in a String
+  var secondToLastLetterOfLastName = lastName[lastName.length - 2];
+  
+ 
+Word Blanks game
+You will create an (optionally humorous) "Fill in the Blanks" style sentence.
+  function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
+    var result = "";
+    var space = " ";
+    result = "My " + myAdjective + space + myNoun + space + myVerb + space + myAdverb + " on the fence.";
+    return result;
+  }
+  wordBlanks("dog", "big", "ran", "quickly");
+  
+Store Multiple Values in one Variable using JavaScript Arrays
+  var ourArray = ["John", 23];
+
+Nest one Array within Another Array - Multi-dimensional array
+  var myArray = [["Guitar", 1], ["Dog", 2]];
+
+Modify Array Data With Indexes
+  var myArray = [1,2,3];
+  myArray[0] = 3; //[3,2,3]
+
+multi-dimensional array, is as an array of arrays
+  var myArray = [[1,2,3], [4,5,6], [7,8,9], [[10,11,12], 13, 14]];
+  var myData = myArray[2][1];
+  
