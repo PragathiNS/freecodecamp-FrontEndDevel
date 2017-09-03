@@ -5,3 +5,39 @@ They do this by using a "label" to point to the data rather than using the data 
 Any of the seven data types may be stored in a variable.
 
 All variables and function names are case sensitive. This means that capitalization matters.
+
+function convertToF(celsius) {
+  var fahrenheit;
+  // Only change code below this line
+  fahrenheit =  celsius * 9/5 + 32;  
+  
+  // Only change code above this line
+  return fahrenheit;
+}
+
+// Change the inputs below to test your code
+convertToF(30);
+
+
+Here is a table of common escape sequences:
+
+Code	Output
+\'	single quote
+\"	double quote
+\\	backslash
+\n	newline
+\r	carriage return
+\t	tab
+\b	backspace
+\f	form feed
+
+.length
+var lastNameLength = 0;
+var lastName = "Lovelace";
+
+// Only change code below this line.
+
+lastNameLength = lastName.length;
+
+
+Bracket notation is a way to get a character at a specific index within a string.
