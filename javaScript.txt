@@ -1,0 +1,7 @@
+JavaScript provides seven different data types which are undefined, null, boolean, string, symbol, number, and object.
+
+Variables allow computers to store and manipulate data in a dynamic fashion. 
+They do this by using a "label" to point to the data rather than using the data itself. 
+Any of the seven data types may be stored in a variable.
+
+All variables and function names are case sensitive. This means that capitalization matters.
