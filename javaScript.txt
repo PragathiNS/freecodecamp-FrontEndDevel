@@ -41,7 +41,6 @@ Bracket notation is a way to get a character at a specific index within a string
 Use Bracket Notation to Find the NthtoLast Character in a String
   var secondToLastLetterOfLastName = lastName[lastName.length - 2];
   
- 
 Word Blanks game
 You will create an (optionally humorous) "Fill in the Blanks" style sentence.
   function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
@@ -66,3 +65,64 @@ multi-dimensional array, is as an array of arrays
   var myArray = [[1,2,3], [4,5,6], [7,8,9], [[10,11,12], 13, 14]];
   var myData = myArray[2][1];
   
+Append data to the array using pish()
+  var myArray = [["John", 23], ["cat", 2]];
+  myArray.push(["dog", 3]);
+  
+.pop() is used to "pop" a value off of the end of an array. We can store this "popped off" value by assigning it to a variable.
+  var myArray = [["John", 23], ["cat", 2]];
+  var removedFromMyArray = myArray.pop(); // [["John", 23]] --> myArray and removedFromArray has ["cat", 2]
+  
+.shift() - It works just like .pop(), except it removes the first element instead of the last.
+  var removedFromMyArray = myArray.shift(); //["John", 23]
+  
+.unshift() works exactly like .push(), but instead of adding the element at the end of the array, unshift() adds the element at the beginning of the array.
+  var myArray = [["John", 23], ["dog", 3]];
+  myArray.shift(); //removes John
+  myArray.unshift(["Paul", 35]); // adds Paul to myArray and becomes Paul, dog
+  
+Shopping List
+  var myList = [];
+  myList.push(["Milk", 1]);
+  myList.push(["Roti", 10]);
+  myList.push(["Butter", 3]);
+  myList.push(["Chocolate", 2]);
+  myList.push(["Yogurt", 5]);
+
+we can divide up our code into reusable parts called functions.
+  function reusableFunction() {
+    console.log("Hi World");
+  }
+  reusableFunction();
+
+Add functions
+  function functionWithArgs(a, b) {
+    console.log(a + b);
+  }
+
+  functionWithArgs(3,5);
+  
+Scope refers to the visibility of variables.Variables which are defined outside of a function block have Global scope. This means, they can be seen everywhere in your JavaScript code.
+  // Declare your variable here
+  var myGlobal = 10;
+
+  function fun1() {
+    // Assign 5 to oopsGlobal Here
+    oopsGlobal = 5;
+  }
+
+  // Only change code above this line
+  function fun2() {
+    var output = "";
+    if (typeof myGlobal != "undefined") {
+      output += "myGlobal: " + myGlobal; // 10
+    }
+    if (typeof oopsGlobal != "undefined") {
+      output += " oopsGlobal: " + oopsGlobal; //5
+    }
+    console.log(output);
+  }
+
+It is possible to have both local and global variables with the same name. When you do this, the local variable takes precedence over the global variable.
+
+
