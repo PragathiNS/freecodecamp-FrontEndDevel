@@ -1,0 +1,23 @@
+Generate Random Fractions with JavaScript
+Math.random() function that generates a random decimal number between 0 (inclusive) and not quite up to 1 (exclusive). 
+Thus Math.random() can return a 0 but never quite return a 1.
+
+  function randomFunction(){
+   var rn = Math.random();
+   return rn;
+  }
+  
+Generate Random Whole Numbers with JavaScript
+
+Math.floor() to round the number down to its nearest whole number.
+  function randomwholeNumber(){
+    var randomNumberBet0and9 = Math.floor(Math.random() * 10);
+    return randomNumberBet0and9;
+  }
+
+Generate Random Whole Numbers within a Range
+
+  function randomRange(myMin, myMax) {
+    return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
+  }
+  var myRandom = randomRange(5, 15);
