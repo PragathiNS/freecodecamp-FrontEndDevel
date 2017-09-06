@@ -1,0 +1,33 @@
+Sift through Text with Regular Expressions
+
+  var testString = "Ada Lovelace and Charles Babbage designed the first computer and the software that would have run on it.";
+  var expression = /and/gi; // g- global and i - ignore the case
+  var andCount = testString.match(expression).length; //2
+
+Find Numbers with Regular expressions
+\d - digit selector (0 to 9)
+/\d/g
++ - match one or more digits
+/\d+/g
+g - global find all the matches
+  var testString = "There are 3 cats but 4 dogs.";
+  var expression = /\d+/g;
+  var digitCount = testString.match(expression).length; //2
+  
+Find Whitespace with Regular Expressions
+\s - whitespace in a string
+\r - carriage return 
+\n - newline
+\t - tab
+\f - form feed
+/\s+/g - whitespace
+  var testString = "How many spaces are there in this sentence?";
+  var expression = /\s+/g;
+  var spaceCount = testString.match(expression).length; //7
+
+Invert Regular Expression Matches with JavaScript
+\S - matches anything that isn't whitespace
+/\S/g
+var testString = "How many non-space characters are there in this sentence?";
+var expression = /\S/g;
+var nonSpaceCount = testString.match(expression).length; //49
