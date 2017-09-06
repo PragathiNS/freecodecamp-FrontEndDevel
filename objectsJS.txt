@@ -1,0 +1,157 @@
+OBJECTS
+Objects are similar to arrays, except that instead of using indexes to access and modify their data,
+you access the data in objects through what are called properties.
+  var myDog = {
+    "name": "Lucky",
+    "legs": 4,
+    "tails": 1,
+    "friends": ["family", "Bones"]
+  };
+
+There are two ways to access the properties of an object: 
+the dot operator (.) and 
+bracket notation ([]), similar to an array.
+
+var dogName = myDog.name; //Lucky
+var dogFriends = myDog.friends; // ["family", "Bones"]
+
+var dogName = myDog["name"]; //Lucky
+var dogFriends = myDog["friends"]; // ["family", "Bones"]
+                                           
+Another use of bracket notation on objects is to use a variable to access a property. 
+  var myDog = "Hunter";
+  var dogs = {
+    Fido: "Mutt",
+    Hunter: "Doberman",
+    Snoopie: "Beagle"
+  }
+  var breed = dogs[myDog];
+  console.log(breed);// "Doberman"
+  
+Updating Object Properties
+  var myDog = {
+    "name": "Coder",
+    "legs": 4,
+    "tails": 1,
+    "friends": ["Free Code Camp Campers"]
+  };
+
+  // Only change code below this line.
+  myDog.name = "Happy Coder";
+  
+Add New Properties to a JavaScript Object
+  myDog.bark = "bow-wow";
+  myDog["bark"] = "bow-wow";
+  
+Delete Properties from a JavaScript Object
+  delete myDog.tails;
+
+LookUps
+  // Setup
+  function phoneticLookup(val) {
+   // var result = "";
+
+    // Only change code below this line
+    var lookUp = {
+      "alpha": "Adams",
+      "bravo": "Boston",
+      "charlie": "Chicago",
+      "delta": "Denver",
+      "echo": "Easy",
+      "foxtrot": "Frank",
+    };
+
+    result = lookUp[val]; 
+    // Only change code above this line
+    return result;
+  }
+
+  // Change this value to test
+  phoneticLookup("charlie");
+  
+Testing Objects for Properties - We can use the .hasOwnProperty(propname) method of objects to determine if that object has the given property name.
+.hasOwnProperty() returns true or false if the property is found or not.
+  var myObj = {
+    gift: "pony",
+    pet: "kitten",
+    bed: "sleigh"
+  };
+
+  function checkObj(checkProp) {
+    // Your Code Here
+    var prop = myObj.hasOwnProperty(checkProp);
+    if(prop){
+      var out = myObj[checkProp]; // Cant use dot notation because checkProp is in the string format
+       return out;
+    }
+
+    else{
+      return "Not Found";
+    }
+
+  }
+
+  // Test your code by modifying these values
+  checkObj("gift");
+
+Manipulating Complex Objects
+  var myMusic = [
+    {
+      "artist": "Billy Joel",
+      "title": "Piano Man",
+      "release_year": 1973,
+      "formats": [ 
+        "CS", 
+        "8T", 
+        "LP" ],
+      "gold": true
+    },
+    // Add record here
+    {
+      "artist": "Katty Perry",
+      "title": "Fireworks",
+      "release_year": 1993,
+      "formats": [
+      "LP",
+      "CD",
+      "video"
+      ]
+    }
+  ];
+
+Accessing Nested Objects
+  var myStorage = {
+    "car": {
+      "inside": {
+        "glove box": "maps",
+        "passenger seat": "crumbs"
+       },
+      "outside": {
+        "trunk": "jack"
+      }
+    }
+  };
+
+  var gloveBoxContents = myStorage.car.inside["glove box"];
+
+Accessing Nested Arrays
+  var myPlants = [
+    { 
+      type: "flowers",
+      list: [
+        "rose",
+        "tulip",
+        "dandelion"
+      ]
+    },
+    {
+      type: "trees",
+      list: [
+        "fir",
+        "pine",
+        "birch"
+      ]
+    }  
+  ];
+  var secondTree = myPlants[1].list[1];
+
