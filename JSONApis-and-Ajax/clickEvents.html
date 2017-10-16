@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        $(document).ready(function() {
+            // 1. Click Event
+            $("#getMessage").on("click", function() {
+                // 2. Change text with Click event
+                // $(".message").html("Here is the message");
+
+                // 3. Read data from JSON file
+                $.getJSON("/json/cats.json", function(json) {
+                    // $(".message").html(JSON.stringify(json)); Only for 3
+
+
+                    /* 4. Convert JSON Data to HTML
+                    var html = "";
+                    json.forEach(function(val) {
+                        var keys = Object / keys(val);
+                        html += "<div class = 'cat'>";
+                        keys.forEach(function(key) {
+                            html += "<strong>" + key + "</strong>: " + val[key] + "<br>";
+                        });
+                        html += "</div><br>";
+                    });
+                    // End of 4 */
+
+                    // 5. Render Images from Data Sources
+                    var html = "";
+
+                    // 6. Prefilter JSON
+                    json = json.filter(function(val) {
+                        return (val.id !== 1);
+                    });
+                    // End of 6
+                    
+                    json.forEach(function(val) {
+                        html += "<div class = 'cat'>";
+                        // Only change code below this line.
+                        html += "<img src = '" + val.imageLink + "' " + "alt='" + val.altText + "'>";
+                        // Only change code above this line.
+                        html += "</div>";
+                    });
+                    $(".message").html(html);
+                    // End of 5
+
+                });
+                // End of 3
+            });
+            // End of 1
+        });
+
+    </script>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row text-center">
+            <h2>Cat Photo Finder</h2>
+        </div>
+        <div class="row text-center">
+            <div class="col-xs-12 well message">
+                The message will go here
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-xs-12">
+                <button id="getMessage" class="btn btn-primary">
+        Get Message
+      </button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
